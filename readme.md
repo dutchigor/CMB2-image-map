@@ -23,7 +23,7 @@ Create a field with type 'image_map' and give it the following properties:
 - base_lng: Int - The longitude to center the map on if no marker is set yet. (optional)
 - base_zoom: Int - The zoom level with which the map will be initialized on the field. If not provided the whole image will be shown and centered for an image overlay. (optional)
 - map_options: Array - This array will be converted to a javascript object and used to load the map. For possible values see Options in https://leafletjs.com/reference-1.6.0.html#map-option. (optional)
-- layer_options: Array - This array will be converted to a javascript object and used to load the baselayer. For possible values see Options in https://leafletjs.com/reference-1.6.0.html#tilelayer. (optional)
+- layer_options: Array - This array will be converted to a javascript object and used to load the baselayer. Only applicable for base_type 'map'. For possible values see Options in https://leafletjs.com/reference-1.6.0.html#tilelayer. (optional)
 
 #### Example
 This is an example of a map field using mapbox
