@@ -23,28 +23,29 @@ class CMB2_img_map extends CMB2_Type_Base
         $lat_input = $this->types->_id( '_lat' );
         $lng_input = $this->types->_id( '_lng' );
         $coordinates = $this->field->escaped_value();
-
-        $field_args = $this->field->args;
-
-        $lat = $coordinates['lat'] ?: $field_args['base_lat'] ?: $this->lat;
-        $lng = $coordinates['lng'] ?: $field_args['base_lng'] ?: $this->lng;
-        $zoom = $field_args['base_zoom'] ?: $this->zoom;
-        $basemap = $field_args['basemap'] ?: '';
-        $layer_options = $field_args['layer_options'] ?: [];
         
         // Enqueue leaflet styles and javascript
         $this->enqueue_assets();
 
         // Pass field variables on to javascript
+        $field_args = $this->field->args;
+
         wp_localize_script( 'cmb2-image-map', 'cmb2ImgMap', [
             'container' => $containter,
             'latInput'  => $lat_input,
             'lngInput'  => $lng_input,
-            'lat'       => $lat,
-            'lng'       => $lng,
-            'zoom'      => $zoom,
-            'basemap'   => $basemap,
-            'layerOpts' => $layer_options,
+            'lat'       => $coordinates['lat'] ?: $field_args['base_lat'] ?: $this->lat,
+            'lng'       => $coordinates['lng'] ?: $field_args['base_lng'] ?: $this->lng,
+            // For zoom, do not set default for base type image
+            'zoom'      => $field_args['base_zoom'] ?:
+                ( ( $field_args['base_type'] === 'image' ) ? '' : $this->zoom ),
+            // Base layer is image array for base type image or url string for base type map
+            'baseLayer' => ( $field_args['base_type'] === 'image' ) ?
+                wp_get_attachment_image_src( $field_args['base_layer'], 'full' ) :
+                $field_args['base_layer'],
+            'baseType'  => $field_args['base_type'] ?: 'map',
+            'mapOpts'   => $field_args['map_options'] ?: [],
+            'layerOpts' => $field_args['layer_options'] ?: [],
         ] );
 
         // display latitude hidden input
