@@ -1,0 +1,59 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "8c4ae805839a7916d981b27428726b5b",
+    "packages": [
+        {
+            "name": "drmonty/leaflet",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mrohnstock/leaflet.git",
+                "reference": "45164225aed66ddff7b079d8a8ab90a9858fa91c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mrohnstock/leaflet/zipball/45164225aed66ddff7b079d8a8ab90a9858fa91c",
+                "reference": "45164225aed66ddff7b079d8a8ab90a9858fa91c",
+                "shasum": ""
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "scripts": [
+                        "js/leaflet.js"
+                    ],
+                    "files": [
+                        "js/*.js",
+                        "js/*.map",
+                        "css/*.css",
+                        "images/*.png"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "JavaScript library for mobile-friendly interactive maps http://leafletjs.com",
+            "homepage": "http://leafletjs.com/",
+            "keywords": [
+                "gis",
+                "map"
+            ],
+            "time": "2019-11-18T06:58:49+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "drmonty/leaflet": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">7.0.0"
+    },
+    "platform-dev": []
+}

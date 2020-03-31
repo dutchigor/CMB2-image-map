@@ -1,0 +1,19 @@
+{
+    "name": "dutchigor/cmb2-image-map",
+    "description": "Adds image map field to CMB2, This allows a marker to be set on each field on top of a pre-defined image or map layer.",
+    "type": "wordpress-plugin",
+    "keywords": ["wordpress", "cmb2", "map"],
+    "homepage": "https://github.com/dutchigor/CMB2-image-map",
+    "license": "GPL-3.0-or-later",
+    "authors": [{
+        "name": "Igor Honhoff",
+        "homepage": "https://github.com/dutchigor"
+    }],
+    "support": {
+        "issues": "https://github.com/dutchigor/CMB2-image-map/issues"
+    },
+    "require": {
+        "php": ">7.0.0",
+        "drmonty/leaflet": "dev-master"
+    }
+}
