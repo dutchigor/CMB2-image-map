@@ -1,5 +1,6 @@
 # CMB2-Image-Map
 __Note: This plugin is still under development__
+
 Adds image map field to CMB2, This allows a marker to be set on each field on top of a pre-defined image or map layer.
 
 Requires [CMB2](https://github.com/CMB2/CMB2) to be added to WordPress seperately.
@@ -8,7 +9,7 @@ Each field can contain one marker and will store the coordinates of that marker.
 
 ## How to install
 Option one
-- Download the latest package and Install as a standard WordPress plugin
+- Download the latest release (CMB2-image-map.zip from releases > assets) and Install as a standard WordPress plugin
 
 Option two
 - Add dutchigor/cmb2-image-map to required packages in composer and require CMB2-image-map.php in your code
