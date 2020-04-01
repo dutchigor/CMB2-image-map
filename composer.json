@@ -19,7 +19,7 @@
     },
     "extra": {
         "assets-target": {
-			"drmonty/leaflet": "dutchigor/cmb2-image-map/leaflet"
+			"drmonty/leaflet": "leaflet"
         },
         "assets-strategy": "copy"
     }
