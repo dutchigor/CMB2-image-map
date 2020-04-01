@@ -14,6 +14,13 @@
     },
     "require": {
         "php": ">7.0.0",
-        "drmonty/leaflet": "dev-master"
+        "drmonty/leaflet": "^1.0.0",
+        "frontpack/composer-assets-plugin": "dev-master"
+    },
+    "extra": {
+        "assets-target": {
+			"drmonty/leaflet": "dutchigor/cmb2-image-map/leaflet"
+        },
+        "assets-strategy": "copy"
     }
 }
