@@ -18,8 +18,9 @@
         "frontpack/composer-assets-plugin": "dev-master"
     },
     "extra": {
-        "assets-target": {
-			"drmonty/leaflet": "leaflet"
+        "assets-dir": "leaflet",
+        "assets-files": {
+			"drmonty/leaflet": [ "css", "js", "images" ]
         },
         "assets-strategy": "copy"
     }
