@@ -13,15 +13,6 @@
         "issues": "https://github.com/dutchigor/CMB2-image-map/issues"
     },
     "require": {
-        "php": ">7.0.0",
-        "drmonty/leaflet": "^1.0.0",
-        "frontpack/composer-assets-plugin": "dev-master"
-    },
-    "extra": {
-        "assets-dir": "leaflet",
-        "assets-files": {
-			"drmonty/leaflet": true
-        },
-        "assets-strategy": "copy"
+        "php": ">7.0.0"
     }
 }
