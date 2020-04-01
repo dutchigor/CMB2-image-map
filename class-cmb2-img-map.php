@@ -79,7 +79,7 @@ class CMB2_img_map extends CMB2_Type_Base
             $reflector = new ReflectionClass( '\Composer\Autoload\ClassLoader' );
             $vendor_dir = dirname( $reflector->getFileName() );
         } else {
-            $vendor_dir = dirname( dirname( dirname( __FILE__ ) ) );
+            $vendor_dir = dirname( dirname( __FILE__ ) );
         }
 
         // Enqueue leaflet css
