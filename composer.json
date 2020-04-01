@@ -20,7 +20,7 @@
     "extra": {
         "assets-dir": "leaflet",
         "assets-files": {
-			"drmonty/leaflet": [ "css", "js", "images" ]
+			"drmonty/leaflet": true
         },
         "assets-strategy": "copy"
     }
