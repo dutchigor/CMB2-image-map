@@ -13,6 +13,7 @@
         "issues": "https://github.com/dutchigor/CMB2-image-map/issues"
     },
     "require": {
-        "php": ">7.0.0"
+        "php": ">7.0.0",
+        "drmonty/leaflet": "^1.0.0",
     }
 }
