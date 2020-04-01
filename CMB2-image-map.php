@@ -26,6 +26,7 @@ define( 'CMB2_IMG_MAP_VERSION', '0.1.0' );
  **/
 function cmb2_img_map_init() {
     // initiate CMB2_img_map class
+    if ( file_exists( './vendor/autoload.php' ) ) require_once './vendor/autoload.php';
     require_once 'class-cmb2-img-map.php';
 
     // Register filters

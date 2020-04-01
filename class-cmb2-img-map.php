@@ -74,10 +74,18 @@ class CMB2_img_map extends CMB2_Type_Base
      * Enqueue Leaflet styles and scripts
      **/
     public function enqueue_assets() {
+        // Get Vendor directory
+        if ( class_exists( '\Composer\Autoload\ClassLoader' ) ) {
+            $reflector = new ReflectionClass( '\Composer\Autoload\ClassLoader' );
+            $vendor_dir = dirname( $reflector->getFileName() );
+        } else {
+            $vendor_dir = dirname( dirname( dirname( __FILE__ ) ) );
+        }
+
         // Enqueue leaflet css
         wp_enqueue_style(
             'leaflet-core',
-            plugins_url( 'vendor/drmonty/leaflet/css/leaflet.css', __FILE__ ),
+            plugins_url( 'drmonty/leaflet/css/leaflet.css', $vendor_dir ),
             null,
             CMB2_IMG_MAP_VERSION
         );
@@ -85,7 +93,7 @@ class CMB2_img_map extends CMB2_Type_Base
         // Enqueue leaflet script
         wp_enqueue_script(
             'leaflet-core',
-            plugins_url( 'vendor/drmonty/leaflet/js/leaflet.min.js', __FILE__ ),
+            plugins_url( 'drmonty/leaflet/js/leaflet.min.js', $vendor_dir ),
             null,
             CMB2_IMG_MAP_VERSION,
             true
